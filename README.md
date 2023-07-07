@@ -51,35 +51,35 @@ The following task is advanced and therefore optional.
 
     - Update the chart whenever a new sample is selected.
 
-![alt text](Resources/images/Image4.PNG)
+![alt text](images/Image4.PNG)
 
 ### Requirements
-Bar Chart (30 points)
-    - Chart initializes without error (10 points)
+### Bar Chart (30 points)
+- Chart initializes without error (10 points)
 
-    - Chart updates when a new sample is selected (5 points)
+- Chart updates when a new sample is selected (5 points)
 
-    - Chart uses Top 10 sample values as values (5 points)
+- Chart uses Top 10 sample values as values (5 points)
 
-    - Chart uses otu_ids as the labels (5 points)
+- Chart uses otu_ids as the labels (5 points)
 
-    - Chart uses otu_labels as the tooltip (5 points)
+- Chart uses otu_labels as the tooltip (5 points)
 
-  ### Bubble Charts (40 points)
+### Bubble Charts (40 points)
 
-    - Chart initializes without error (10 points)
+- Chart initializes without error (10 points)
 
-    - Chart updates when a new sample is selected (5 points)
+- Chart updates when a new sample is selected (5 points)
 
-    - Chart uses otu_ids for the x values (5 points)
+- Chart uses otu_ids for the x values (5 points)
 
-    - Chart uses otu_ids for marker colors (5 points)
+- Chart uses otu_ids for marker colors (5 points)
 
-    - Chart uses sample_values for the y values (5 points)
+- Chart uses sample_values for the y values (5 points)
 
-    - Chart uses sample_values for the marker size (5 points)
+- Chart uses sample_values for the marker size (5 points)
 
-    - Chart uses `otu_labels for text values (5 points)
+- Chart uses `otu_labels for text values (5 points)
 
 ### Metadata and Deployment (30 points)
 
