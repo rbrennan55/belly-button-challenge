@@ -45,11 +45,11 @@ Complete the following steps:
 ### Advanced Challenge Assignment (Optional with no extra points earning)
 The following task is advanced and therefore optional.
 
-    - Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/Links to an external site. to plot the weekly washing frequency of the individual.
+- Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/Links to an external site. to plot the weekly washing frequency of the individual.
 
-    - You will need to modify the example gauge code to account for values ranging from 0 through 9.
+- You will need to modify the example gauge code to account for values ranging from 0 through 9.
 
-    - Update the chart whenever a new sample is selected.
+- Update the chart whenever a new sample is selected.
 
 ![alt text](images/Image4.PNG)
 
@@ -83,8 +83,8 @@ The following task is advanced and therefore optional.
 
 ### Metadata and Deployment (30 points)
 
-    - Metadata initializes without error (10 points)
+- Metadata initializes without error (10 points)
 
-    - Metadata updates when a new sample is selected (10 points)
+- Metadata updates when a new sample is selected (10 points)
 
-    - App Successfully Deployed to Github Pages (10 points)
+- App Successfully Deployed to Github Pages (10 points)
