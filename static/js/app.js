@@ -19,7 +19,7 @@ function init() {
    
 // Initialization function to:
 //  - Create Test Subject ID no. dropdown list
-//  - Populate the dropdown list with ['names'] from the sample.json file
+//  - Create Demographic Data table and Bubble and Bar charts
 
 
 // Grab json data from 'https://2u-data-curriculum-team'
@@ -115,7 +115,7 @@ function bubbleGraphDraw(id_num){
         Plotly.newPlot('bubble', bubbleData, layout); 
     });    
 }
-    //     
+    //On dropdown change call the graph and demographic functions    
 function optionChanged(selection){
     
         demographyTable(selection);
