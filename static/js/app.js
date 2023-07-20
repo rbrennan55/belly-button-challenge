@@ -42,8 +42,6 @@ function init() {
         demographyTable(id_num);
         barGraphDraw(id_num)
         bubbleGraphDraw(id_num);
-        gaugeGraphDraw(id_num);
-     
     });
 }
 
@@ -52,8 +50,7 @@ function demographyTable(id_num){
     metaDataTag.html("");
     var meta_data = data.metadata.filter(row => row.id == id_num);
         Object.entries(meta_data[0]).forEach(([key, value]) => { 
-            //metaDataTag.append("h6").text(`${key.toUpperCase()}: ${value}`)
-            metaDataTag.append("h6").text(`${key}: ${value}`)
+            metaDataTag.append("h6").text(`${key.toUpperCase()}: ${value}`)
         });
 }
        
@@ -75,19 +72,14 @@ function barGraphDraw(id_num){
             type: "bar",
             orientation: "h"
         };
-        var data = [trace];
+        var barData = [trace];
         var layout = {
-            title: "Top Ten OTUs for Individual ",
-            //margin: {l: 100, r: 100, t: 100, b: 100},
-            
+            title: "Top 10 Bacterial Cultures Found",                     
         }; 
    
-    Plotly.newPlot("bar",data,layout);
+    Plotly.newPlot("bar", barData, layout);
     });
-}
-
-
-        
+}      
 
 function bubbleGraphDraw(id_num){
     
@@ -99,7 +91,9 @@ function bubbleGraphDraw(id_num){
         var results = filterRow[0];
         var sample_values = results.sample_values;
         var otu_ids = results.otu_ids;
-        var otu_labels = results.otu_labels;   
+        var otu_labels = results.otu_labels;
+        
+        
         var trace = {
             x: otu_ids,
             y: sample_values,
@@ -114,24 +108,19 @@ function bubbleGraphDraw(id_num){
         var bubbleData = [trace];
         var layout = {
             showlegend: false,
+            title: "Bacteria Cultures Per Sample",
             hovermode: 'closest',
             xaxis: {title:"OTU ID"},
         };
         Plotly.newPlot('bubble', bubbleData, layout); 
     });    
 }
-        // Draw the Gauge Chart
-function gaugeGraphDraw(id_num){
-
-    //Plotly.restyle("gauge", data, layout);
-
-}
+    //     
 function optionChanged(selection){
     
         demographyTable(selection);
         barGraphDraw(selection);
         bubbleGraphDraw(selection);
-        gaugeGraphDraw(selection);
 }
   
 init();
