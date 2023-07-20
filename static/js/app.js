@@ -43,7 +43,6 @@ function init() {
         barGraphDraw(id_num)
         bubbleGraphDraw(id_num);
         gaugeGraphDraw(id_num);
-
      
     });
 }
@@ -67,8 +66,7 @@ function barGraphDraw(id_num){
         var otu_ids = results.otu_ids;
         var otu_labels = results.otu_labels;   
         
-        //console.log(barData);
-        
+           
         var trace = {
             x: sample_values.slice(0,10).reverse(),
             y: otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse(),
@@ -89,11 +87,12 @@ function barGraphDraw(id_num){
 }
 
 
-        // Draw the Bubble Chart
-
+        
 
 function bubbleGraphDraw(id_num){
- 
+    
+    // Draw the Bubble Chart
+
     d3.json(url).then((data) => {
         var selectionID = data.samples;
         var filterRow = selectionID.filter(row => row.id == id_num);
@@ -109,7 +108,7 @@ function bubbleGraphDraw(id_num){
             marker: {
             size: sample_values,
             color: otu_ids,
-            //colorscale:"Electric"
+            colorscale:"Portland"
             }
         };
         var bubbleData = [trace];
