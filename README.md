@@ -1,6 +1,6 @@
 # belly-button-challenge
 
-### Completed the following tasks
+### The following tasks were completed
 
 1. Used the D3 library to read in 'samples.json' from the URL:
 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json'.
@@ -41,12 +41,3 @@
 
 7. Deployed your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo. Ensure that your repository has regular commits and a thorough README.md file
 
-### Advanced Challenge Assignment
-
-- Adapted the Gauge Chart from `https://plot.ly/javascript/gauge-charts/Links` to an external site. to plot the weekly washing frequency of the individual.
-
-- Modifed the example gauge code to account for values ranging from 0 through 9.
-
-- Updated the chart whenever a new sample is selected.
-
-![alt text](images/Image5.PNG)
