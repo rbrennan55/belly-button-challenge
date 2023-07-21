@@ -35,7 +35,7 @@ function init() {
             testSubjectDropDownID.append("option").text(element).property("value", element); 
         });
                     
-        // Initialize the Demographic chart with first ID number
+        // Create the charts with first ID number
         let id_num = names[0];
 
        
@@ -48,6 +48,8 @@ function init() {
 function demographyTable(id_num){
     // Clean table
     metaDataTag.html("");
+
+    // Populate Demographic table
     var meta_data = data.metadata.filter(row => row.id == id_num);
         Object.entries(meta_data[0]).forEach(([key, value]) => { 
             metaDataTag.append("h6").text(`${key.toUpperCase()}: ${value}`)
@@ -55,6 +57,8 @@ function demographyTable(id_num){
 }
        
 function barGraphDraw(id_num){
+    // Create bar graph with ID number that was passed
+
     d3.json(url).then((data) => {
         var selectionID = data.samples;
         var filterRow = selectionID.filter(row => row.id == id_num);
@@ -82,8 +86,7 @@ function barGraphDraw(id_num){
 }      
 
 function bubbleGraphDraw(id_num){
-    
-    // Draw the Bubble Chart
+    // Create bubble graph with ID number that was passed
 
     d3.json(url).then((data) => {
         var selectionID = data.samples;
@@ -115,12 +118,14 @@ function bubbleGraphDraw(id_num){
         Plotly.newPlot('bubble', bubbleData, layout); 
     });    
 }
-    //On dropdown change call the graph and demographic functions    
+ 
 function optionChanged(selection){
-    
+    // On dropdown change call the graph and demographic functions with selected
+    // value
+
         demographyTable(selection);
         barGraphDraw(selection);
         bubbleGraphDraw(selection);
 }
-  
+// Call initial function  
 init();
