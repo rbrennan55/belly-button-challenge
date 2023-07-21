@@ -1,5 +1,7 @@
 # belly-button-challenge
 
+The assignment dashboard can be found at: [https://rbrennan55.github.io/belly-button-challenge/](https://rbrennan55.github.io/belly-button-challenge/)
+
 ### The following tasks were completed
 
 1. Used the D3 library to read in 'samples.json' from the URL:
